@@ -30,10 +30,6 @@ Classification is mapped to a contextual bandit setting where each class corresp
 ## Conclusion
 Model performance strongly depends on task complexity. While LinUCB performs well on simple binary tasks, its linear assumptions cause it to degrade on more complex reward structures. NeuralUCB overcomes this limitation through richer reward representation and achieves the best results on complex tasks, but its instability, sensitivity to hyperparameters, and high computational and memory costs make it unsuitable for simpler problems. Overall, Thompson Sampling stands out as the most balanced and reliable choice across both datasets, leveraging Bayesian exploration to deliver strong cumulative reward and regret with significantly lower resource requirements.
 
-## Requirements
-
-To run the notebook, you will need Python 3 along with standard data science and deep learning libraries:
-
 ```bash
 pip install numpy scikit-learn matplotlib torch jupyter
 ```
