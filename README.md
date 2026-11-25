@@ -1,11 +1,11 @@
-# Sequential Decision Making - Contextual Bandits
+# Classification Task as Contextual Multi-Arms Bandits
 
-This repository contains the implementation notebook and the report for Lab 2 of the Sequential Decision Making course. The project explores framing classification tasks as contextual multi-armed bandit problems, comparing linear, Bayesian, and neural exploration strategies, and extends the framework to a Markov Decision Process (MDP) for active feature acquisition.
+The project explores framing classification tasks as contextual multi-armed bandit problems, comparing linear, Bayesian, and neural exploration strategies, and extends the framework to a Markov Decision Process (MDP) for active feature acquisition.
 
 ## Repository Contents
 
-- `lab2_GARRIGUES-JOURNAUD.pdf`: Full report detailing the theoretical formulations, experimental results, and the MDP extension.
-- `*.ipynb`: Jupyter notebook containing the algorithms' implementations and experimental evaluations.
+- `report.pdf`: Full report detailing the theoretical formulations, experimental results, and the MDP extension.
+- `Bandits_Classification.ipynb`: Jupyter notebook containing the algorithms' implementations and experimental evaluations.
 
 ## Problem & Datasets
 
@@ -26,6 +26,9 @@ Classification is mapped to a contextual bandit setting where each class corresp
 - **Breast Cancer**: Linear methods (LinUCB and Thompson Sampling) achieve strong performance, with Thompson Sampling matching Logistic Regression (2.1% test error) at a low computational cost.
 - **Digits**: Under partial feedback and higher task complexity, NeuralUCB outperforms all baselines (2.4% test error), though at a significantly higher computational and memory cost than Thompson Sampling (5.1% test error).
 - **MDP Extension**: The report also formulates a Fitted-Q Iteration approach to solve the problem as an MDP where the agent learns to classify contexts while minimizing the number of revealed features.
+
+## Conclusion
+Model performance strongly depends on task complexity. While LinUCB performs well on simple binary tasks, its linear assumptions cause it to degrade on more complex reward structures. NeuralUCB overcomes this limitation through richer reward representation and achieves the best results on complex tasks, but its instability, sensitivity to hyperparameters, and high computational and memory costs make it unsuitable for simpler problems. Overall, Thompson Sampling stands out as the most balanced and reliable choice across both datasets, leveraging Bayesian exploration to deliver strong cumulative reward and regret with significantly lower resource requirements.
 
 ## Requirements
 
