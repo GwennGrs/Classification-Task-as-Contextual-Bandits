@@ -33,7 +33,3 @@ Model performance strongly depends on task complexity. While LinUCB performs wel
 ```bash
 pip install numpy scikit-learn matplotlib torch jupyter
 ```
-
-## Author
-
-Gwenn Garrigues-Journaud
